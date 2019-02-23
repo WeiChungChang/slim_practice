@@ -37,6 +37,9 @@ from nets.nasnet import nasnet
 from nets.nasnet import pnasnet
 
 
+import practice.resnet_v1_bottleneck
+
+
 slim = tf.contrib.slim
 
 networks_map = {'alexnet_v2': alexnet.alexnet_v2,
@@ -73,6 +76,10 @@ networks_map = {'alexnet_v2': alexnet.alexnet_v2,
                 'nasnet_large': nasnet.build_nasnet_large,
                 'pnasnet_large': pnasnet.build_pnasnet_large,
                 'pnasnet_mobile': pnasnet.build_pnasnet_mobile,
+                #================================================================ 
+                # Practice below
+                #================================================================
+                'practice_resnet_v1_50_bottleneck': practice.resnet_v1_bottleneck.resnet_v1_50,
                }
 
 arg_scopes_map = {'alexnet_v2': alexnet.alexnet_v2_arg_scope,
@@ -110,6 +117,10 @@ arg_scopes_map = {'alexnet_v2': alexnet.alexnet_v2_arg_scope,
                   'nasnet_large': nasnet.nasnet_large_arg_scope,
                   'pnasnet_large': pnasnet.pnasnet_large_arg_scope,
                   'pnasnet_mobile': pnasnet.pnasnet_mobile_arg_scope,
+                  #================================================================ 
+                  # Practice below
+                  #================================================================
+                  'practice_resnet_v1_50_bottleneck': practice.resnet_v1_bottleneck.resnet_arg_scope,
                  }
 
 

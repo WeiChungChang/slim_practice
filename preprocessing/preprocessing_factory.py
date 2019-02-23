@@ -73,6 +73,10 @@ def get_preprocessing(name, is_training=False):
       'vgg_a': vgg_preprocessing,
       'vgg_16': vgg_preprocessing,
       'vgg_19': vgg_preprocessing,
+      #================================================================ 
+      # Practice below
+      #================================================================
+      'practice_resnet_v1_50_bottleneck': vgg_preprocessing,
   }
 
   if name not in preprocessing_fn_map:
